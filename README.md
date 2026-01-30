@@ -1,33 +1,42 @@
-# Personalized Herbal Formula System
+# Herbal Formula System
+### Clinical-Grade Botanical Formulation Engine
 
-A clinical-grade algorithmic engine for generating personalized herbal formulas.
+**Pharmacological Precision. Aesthetics of Apple.**
 
 ## Overview
-This application helps practitioners or users generate safe, effective herbal formulas by analyzing:
-- **Patient Profile**: Symptoms (Anxiety, Insomnia, etc.), conditions (Pregnancy, Gastritis), and medications.
-- **Plant Data**: A database of plants with properties, safety constraints, synergies, and antagonisms.
+The **Herbal Formula System** is a sophisticated algorithmic platform designed for healthcare practitioners to generate safe, synergistic, and clinically-validated botanical prescriptions. It bridges traditional herbal wisdom with modern clinical safety data via a high-performance Python engine.
 
-## Features
-- **Dynamic Scoring**: Prioritizes plants that match the user's top symptoms.
-- **Safety Constraints**: Strictly enforces safety rules (e.g., excluding plants unsafe for pregnancy).
-- **Synergy Optimization**: Boosts scores for plants that work well together.
-- **Dosage Calculation**: Computes exact percentages and grams for the final blend.
-- **Streamlit UI**: A modern, responsive interface.
+## Key Features
+- **Precision Scoring Algorithm**: Matches plant properties to multi-dimensional patient profiles with role-based weighting.
+- **Clinical Safety Guardrails**: Real-time enforcement of contraindications (Pregnancy, Allergies, Polypharmacy).
+- **Synergy & Antagonism Logic**: Advanced calculation of positive and negative interactions for maximum blend efficacy.
+- **Dynamic Dosage Engine**: Automated generation of precise milligram-accurate formulations and percentage-based blends.
+- **Premium User Experience**: A clean, distraction-free interface built for professional clinical environments.
+
+## Technology Stack
+- **Engine**: Python 3.9+ 
+- **Frontend**: Streamlit (Bespoke CSS Architecture)
+- **Database**: JSON-based Clinical Knowledge Graph
+- **Logic**: Pandas-driven constraint processing
 
 ## Installation
-1. Clone the repository.
-2. Install dependencies:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/rodrigope12/herbal-formula-system.git
+   cd herbal-formula-system
+   ```
+
+2. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-## Usage
-Run the app using Streamlit:
-```bash
-streamlit run app.py
-```
+3. **Run the application**
+   ```bash
+   streamlit run app.py
+   ```
 
-## Structure
-- `app.py`: Main Streamlit application.
-- `herbal_engine.py`: Core logic for scoring, constraints, and formulation.
-- `plants_db.json`: Database of medicinal plants and their properties.
+## Design Philosophy
+This system rejects the "clunky" nature of medical software. It prioritizes a premium information hierarchy, subtle micro-animations, and a responsive layout to ensure the practitioner's focus remains on patient care.
+

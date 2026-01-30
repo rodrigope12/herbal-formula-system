@@ -14,24 +14,24 @@ except ImportError:
         sys.exit(1)
 
 def extract_text(pdf_path):
-    print(f"\n--- Extracting from: {os.path.basename(pdf_path)} ---")
+    print(f"--- Extracting from: {pdf_path} ---")
     try:
         reader = PdfReader(pdf_path)
         text = ""
         for page in reader.pages:
             text += page.extract_text() + "\n"
-        print(text)
+        return text
     except Exception as e:
         print(f"Error reading {pdf_path}: {e}")
+        return ""
 
-files = [
-    "/Users/rodrigoperezcordero/Documents/TRABAJO/RELATIVE DOSING LIMITS.pdf",
-    "/Users/rodrigoperezcordero/Documents/TRABAJO/phase 2.pdf",
-    "/Users/rodrigoperezcordero/Documents/TRABAJO/PLANT SCORING SYSTEM (1–10) - SROCK + PLANT SCORING SYSTEM (1–10) (1).pdf"
-]
+pdf_files = ["Project_Overview.pdf"]
 
-for f in files:
-    if os.path.exists(f):
-        extract_text(f)
-    else:
-        print(f"File not found: {f}")
+with open("pdf_extracted.txt", "w", encoding="utf-8") as f:
+    f.write("Using PyPDF2\n\n")
+    for pdf_file in pdf_files:
+        if os.path.exists(pdf_file):
+            content = extract_text(pdf_file)
+            f.write(content + "\n\n")
+        else:
+            print(f"File not found: {pdf_file}")

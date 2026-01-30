@@ -74,8 +74,9 @@ engine = load_engine()
 
 # --- Helpers ---
 def render_header():
-    st.title("Personalized Herbal Formula")
-    st.markdown("<h3 style='margin-top: -15px;'>Clinical grade algorithm based on botanical constraints</h3>", unsafe_allow_html=True)
+    st.title("Herbal Formula System")
+    st.markdown("<h3 style='margin-top: -15px;'>Clinical-Grade Botanical Formulation Engine</h3>", unsafe_allow_html=True)
+    st.markdown("<p style='color: #86868b; font-size: 0.9rem;'>Pharmacological Precision. Aesthetics of Apple.</p>", unsafe_allow_html=True)
     st.markdown("---")
 
 def sidebar_admin():
