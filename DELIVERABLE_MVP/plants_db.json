@@ -1,0 +1,693 @@
+[
+    {
+        "name": "Ashwagandha",
+        "family": "Solanaceae",
+        "role": "primary",
+        "min_percent": 25,
+        "max_percent": 35,
+        "attributes": [
+            "adaptogen",
+            "regulatory"
+        ],
+        "constraints": [
+            "pregnancy_caution"
+        ],
+        "scores": {
+            "energy": 8,
+            "sleep": 7,
+            "stress": 9,
+            "immunity": 6
+        }
+    },
+    {
+        "name": "Valerian",
+        "family": "Valerianaceae",
+        "role": "primary",
+        "min_percent": 20,
+        "max_percent": 30,
+        "attributes": [
+            "deep_sedative"
+        ],
+        "constraints": [
+            "limit_daytime_anxiety"
+        ],
+        "scores": {
+            "sleep": 10,
+            "anxiety": 8,
+            "pain": 6
+        }
+    },
+    {
+        "name": "Bacopa",
+        "family": "Plantaginaceae",
+        "role": "primary",
+        "min_percent": 25,
+        "max_percent": 35,
+        "attributes": [
+            "nootropic"
+        ],
+        "constraints": [],
+        "scores": {
+            "focus": 9,
+            "memory": 9,
+            "anxiety": 5
+        }
+    },
+    {
+        "name": "Korean Ginseng",
+        "family": "Araliaceae",
+        "role": "primary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "attributes": [
+            "strong_stimulant",
+            "adaptogen"
+        ],
+        "constraints": [
+            "high_anxiety_exclude",
+            "medication_exclude"
+        ],
+        "scores": {
+            "energy": 10,
+            "focus": 8,
+            "immunity": 7
+        }
+    },
+    {
+        "name": "Echinacea",
+        "family": "Asteraceae",
+        "role": "primary",
+        "min_percent": 20,
+        "max_percent": 30,
+        "attributes": [
+            "immunity"
+        ],
+        "constraints": [
+            "limit_prolonged_use",
+            "asteraceae_allergy"
+        ],
+        "scores": {
+            "immunity": 10
+        }
+    },
+    {
+        "name": "Chamomile",
+        "family": "Asteraceae",
+        "role": "secondary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "attributes": [
+            "regulatory",
+            "sedative"
+        ],
+        "constraints": [
+            "asteraceae_allergy"
+        ],
+        "scores": {
+            "digestion": 9,
+            "anxiety": 7,
+            "sleep": 6
+        }
+    },
+    {
+        "name": "Calendula",
+        "family": "Asteraceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "attributes": [
+            "soothing"
+        ],
+        "constraints": [
+            "asteraceae_allergy"
+        ],
+        "scores": {
+            "skin": 8,
+            "digestion": 7,
+            "inflammation": 7
+        }
+    },
+    {
+        "name": "Dandelion",
+        "family": "Asteraceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "attributes": [
+            "regulatory",
+            "detox"
+        ],
+        "constraints": [
+            "asteraceae_allergy"
+        ],
+        "scores": {
+            "detox": 9,
+            "digestion": 7
+        }
+    },
+    {
+        "name": "Chrysanthemum",
+        "family": "Asteraceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "attributes": [
+            "cooling"
+        ],
+        "constraints": [
+            "asteraceae_allergy"
+        ],
+        "scores": {
+            "inflammation": 6,
+            "headache": 7
+        }
+    },
+    {
+        "name": "Lavender",
+        "family": "Lamiaceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "attributes": [
+            "regulatory",
+            "sedative"
+        ],
+        "constraints": [],
+        "scores": {
+            "anxiety": 9,
+            "sleep": 8,
+            "headache": 7
+        }
+    },
+    {
+        "name": "Lemon Balm",
+        "family": "Lamiaceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "attributes": [
+            "regulatory",
+            "sedative"
+        ],
+        "constraints": [],
+        "scores": {
+            "anxiety": 8,
+            "digestion": 7,
+            "mood": 8
+        }
+    },
+    {
+        "name": "Peppermint",
+        "family": "Lamiaceae",
+        "role": "secondary",
+        "min_percent": 5,
+        "max_percent": 15,
+        "attributes": [
+            "regulatory"
+        ],
+        "constraints": [
+            "gastritis_caution"
+        ],
+        "scores": {
+            "digestion": 10,
+            "energy": 5,
+            "focus": 6
+        }
+    },
+    {
+        "name": "Rosemary",
+        "family": "Lamiaceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 15,
+        "attributes": [
+            "stimulant"
+        ],
+        "constraints": [
+            "hypertension_caution",
+            "anxiety_caution"
+        ],
+        "scores": {
+            "focus": 8,
+            "energy": 6,
+            "digestion": 6
+        }
+    },
+    {
+        "name": "Salvia fruticosa",
+        "family": "Lamiaceae",
+        "role": "secondary",
+        "min_percent": 5,
+        "max_percent": 15,
+        "attributes": [
+            "astringent"
+        ],
+        "constraints": [],
+        "scores": {
+            "inflammation": 7,
+            "digestion": 6
+        }
+    },
+    {
+        "name": "Micromeria fruticosa",
+        "family": "Lamiaceae",
+        "role": "secondary",
+        "min_percent": 5,
+        "max_percent": 15,
+        "attributes": [
+            "digestive"
+        ],
+        "constraints": [],
+        "scores": {
+            "digestion": 7
+        }
+    },
+    {
+        "name": "Linden",
+        "family": "Tiliaceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "attributes": [
+            "regulatory",
+            "sedative"
+        ],
+        "constraints": [],
+        "scores": {
+            "anxiety": 8,
+            "sleep": 7
+        }
+    },
+    {
+        "name": "Fennel",
+        "family": "Apiaceae",
+        "role": "secondary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "attributes": [
+            "regulatory"
+        ],
+        "constraints": [],
+        "scores": {
+            "digestion": 9,
+            "bloating": 9
+        }
+    },
+    {
+        "name": "Anise",
+        "family": "Apiaceae",
+        "role": "secondary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "attributes": [
+            "regulatory"
+        ],
+        "constraints": [],
+        "scores": {
+            "digestion": 9,
+            "bloating": 9
+        }
+    },
+    {
+        "name": "Asiatic Centella",
+        "family": "Apiaceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "attributes": [
+            "regulatory",
+            "adaptogen"
+        ],
+        "constraints": [
+            "adaptogen"
+        ],
+        "scores": {
+            "skin": 9,
+            "circulation": 8,
+            "focus": 6
+        }
+    },
+    {
+        "name": "Ginger",
+        "family": "Zingiberaceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "attributes": [
+            "regulatory",
+            "stimulant"
+        ],
+        "constraints": [
+            "gastritis_caution"
+        ],
+        "scores": {
+            "digestion": 8,
+            "nausea": 10,
+            "immunity": 6,
+            "circulation": 7
+        }
+    },
+    {
+        "name": "Turmeric",
+        "family": "Zingiberaceae",
+        "role": "secondary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "attributes": [
+            "anti_inflammatory"
+        ],
+        "constraints": [],
+        "scores": {
+            "inflammation": 9,
+            "immunity": 7,
+            "digestion": 6
+        }
+    },
+    {
+        "name": "Green Tea",
+        "family": "Theaceae",
+        "role": "primary",
+        "min_percent": 10,
+        "max_percent": 15,
+        "attributes": [
+            "strong_stimulant",
+            "antioxidant"
+        ],
+        "constraints": [
+            "anxiety_exclude",
+            "insomnia_exclude"
+        ],
+        "scores": {
+            "energy": 9,
+            "focus": 8,
+            "antioxidant": 9
+        }
+    },
+    {
+        "name": "Ginkgo biloba",
+        "family": "Ginkgoaceae",
+        "role": "primary",
+        "min_percent": 15,
+        "max_percent": 20,
+        "attributes": [
+            "nootropic"
+        ],
+        "constraints": [
+            "medication_exclude",
+            "bleeding_risk"
+        ],
+        "scores": {
+            "circulation": 9,
+            "focus": 8,
+            "memory": 8
+        }
+    },
+    {
+        "name": "Licorice",
+        "family": "Fabaceae",
+        "role": "secondary",
+        "min_percent": 5,
+        "max_percent": 10,
+        "attributes": [
+            "regulatory",
+            "adaptogen"
+        ],
+        "constraints": [
+            "hypertension_exclude",
+            "long_term_limit"
+        ],
+        "scores": {
+            "digestion": 8,
+            "immunity": 7,
+            "adrenal": 8
+        }
+    },
+    {
+        "name": "Albizia",
+        "family": "Fabaceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "attributes": [
+            "regulatory",
+            "sedative"
+        ],
+        "constraints": [
+            "mood_support"
+        ],
+        "scores": {
+            "mood": 9,
+            "anxiety": 7
+        }
+    },
+    {
+        "name": "Senna",
+        "family": "Fabaceae",
+        "role": "secondary",
+        "min_percent": 5,
+        "max_percent": 15,
+        "attributes": [
+            "laxative"
+        ],
+        "constraints": [
+            "laxative_limit",
+            "long_term_exclude"
+        ],
+        "scores": {
+            "constipation": 10
+        }
+    },
+    {
+        "name": "Rose",
+        "family": "Rosaceae",
+        "role": "support",
+        "min_percent": 5,
+        "max_percent": 10,
+        "attributes": [
+            "soothing"
+        ],
+        "constraints": [],
+        "scores": {
+            "mood": 7,
+            "flavor": 10
+        }
+    },
+    {
+        "name": "Raspberry",
+        "family": "Rosaceae",
+        "role": "support",
+        "min_percent": 5,
+        "max_percent": 15,
+        "attributes": [
+            "astringent"
+        ],
+        "constraints": [],
+        "scores": {
+            "women_health": 8,
+            "flavor": 7
+        }
+    },
+    {
+        "name": "Hibiscus",
+        "family": "Malvaceae",
+        "role": "support",
+        "min_percent": 5,
+        "max_percent": 10,
+        "attributes": [
+            "cooling"
+        ],
+        "constraints": [
+            "hypotension_caution"
+        ],
+        "scores": {
+            "flavor": 9,
+            "circulation": 7
+        }
+    },
+    {
+        "name": "Malva sylvestris",
+        "family": "Malvaceae",
+        "role": "support",
+        "min_percent": 5,
+        "max_percent": 15,
+        "attributes": [
+            "demulcent"
+        ],
+        "constraints": [],
+        "scores": {
+            "digestion": 7,
+            "respiratory": 7
+        }
+    },
+    {
+        "name": "Cinnamon",
+        "family": "Lauraceae",
+        "role": "support",
+        "min_percent": 5,
+        "max_percent": 10,
+        "attributes": [
+            "regulatory",
+            "warming"
+        ],
+        "constraints": [
+            "gastritis_caution"
+        ],
+        "scores": {
+            "sugar_balance": 8,
+            "circulation": 7,
+            "flavor": 9
+        }
+    },
+    {
+        "name": "Lemongrass",
+        "family": "Poaceae",
+        "role": "support",
+        "min_percent": 5,
+        "max_percent": 10,
+        "attributes": [
+            "regulatory"
+        ],
+        "constraints": [],
+        "scores": {
+            "digestion": 6,
+            "flavor": 8
+        }
+    },
+    {
+        "name": "Osmanthus",
+        "family": "Oleaceae",
+        "role": "support",
+        "min_percent": 5,
+        "max_percent": 10,
+        "attributes": [
+            "soothing"
+        ],
+        "constraints": [],
+        "scores": {
+            "flavor": 9,
+            "mood": 7
+        }
+    },
+    {
+        "name": "Magnolia",
+        "family": "Magnoliaceae",
+        "role": "primary",
+        "min_percent": 10,
+        "max_percent": 15,
+        "attributes": [
+            "sedative"
+        ],
+        "constraints": [],
+        "scores": {
+            "anxiety": 8,
+            "sleep": 7
+        }
+    },
+    {
+        "name": "Blue Lotus",
+        "family": "Nymphaeaceae",
+        "role": "primary",
+        "min_percent": 10,
+        "max_percent": 15,
+        "attributes": [
+            "sedative"
+        ],
+        "constraints": [],
+        "scores": {
+            "sleep": 8,
+            "mood": 8
+        }
+    },
+    {
+        "name": "Bitter Orange (peel)",
+        "family": "Rutaceae",
+        "role": "secondary",
+        "min_percent": 5,
+        "max_percent": 15,
+        "attributes": [
+            "strong_stimulant"
+        ],
+        "constraints": [
+            "stimulant_caution"
+        ],
+        "scores": {
+            "energy": 7,
+            "digestion": 6
+        }
+    },
+    {
+        "name": "Bitter Orange (flower)",
+        "family": "Rutaceae",
+        "role": "secondary",
+        "min_percent": 5,
+        "max_percent": 15,
+        "attributes": [
+            "sedative"
+        ],
+        "constraints": [],
+        "scores": {
+            "anxiety": 8,
+            "sleep": 7
+        }
+    },
+    {
+        "name": "Garcinia",
+        "family": "Clusiaceae",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "attributes": [
+            "metabolic"
+        ],
+        "constraints": [],
+        "scores": {
+            "metabolism": 8
+        }
+    },
+    {
+        "name": "Cistus creticus",
+        "family": "Cistaceae",
+        "role": "secondary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "attributes": [
+            "immunity"
+        ],
+        "constraints": [],
+        "scores": {
+            "immunity": 8
+        }
+    },
+    {
+        "name": "Boldo",
+        "family": "Monimiaceae",
+        "role": "secondary",
+        "min_percent": 5,
+        "max_percent": 10,
+        "attributes": [
+            "regulatory"
+        ],
+        "constraints": [
+            "limit_continuous_use"
+        ],
+        "scores": {
+            "liver": 9,
+            "digestion": 7
+        }
+    },
+    {
+        "name": "Passionflower",
+        "family": "Passifloraceae",
+        "role": "primary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "attributes": [
+            "deep_sedative"
+        ],
+        "constraints": [],
+        "scores": {
+            "sleep": 9,
+            "anxiety": 8
+        }
+    }
+]

@@ -1,0 +1,716 @@
+[
+    {
+        "id": "valerian",
+        "name": "Valerian",
+        "family_botanical": "Valerianaceae",
+        "family_functional": "Sedative",
+        "role": "primary",
+        "min_percent": 25,
+        "max_percent": 40,
+        "constraints": {
+            "global_family_limit": {
+                "family": "Sedative",
+                "max_sum": 40
+            },
+            "conditions": [
+                {
+                    "condition": "daytime_anxiety",
+                    "action": "cap_percent",
+                    "value": 25,
+                    "min_value": 20
+                },
+                {
+                    "condition": "daytime_anxiety",
+                    "action": "set_role",
+                    "value": "secondary"
+                }
+            ]
+        },
+        "scores": {
+            "sleep": 10,
+            "anxiety": 8,
+            "pain": 6
+        },
+        "synergies": [
+            {
+                "with": "passionflower",
+                "bonus": 1.0,
+                "axis": "deep sleep"
+            }
+        ],
+        "antagonisms": [
+            {
+                "with": "green_tea",
+                "penalty": 1.0,
+                "axis": "functional antagonism"
+            },
+            {
+                "with": "korean_ginseng",
+                "penalty": 1.0,
+                "axis": "coherence"
+            }
+        ],
+        "family": "Sedative",
+        "attributes": []
+    },
+    {
+        "id": "passionflower",
+        "name": "Passionflower",
+        "family_botanical": "Passifloraceae",
+        "family_functional": "Sedative",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "constraints": {
+            "global_family_limit": {
+                "family": "Sedative",
+                "max_sum": 40
+            }
+        },
+        "scores": {
+            "anxiety": 9,
+            "sleep": 8
+        },
+        "synergies": [
+            {
+                "with": "valerian",
+                "bonus": 1.0
+            },
+            {
+                "with": "lemon_balm",
+                "bonus": 0.5,
+                "axis": "anxiety"
+            }
+        ],
+        "antagonisms": [
+            {
+                "with": "green_tea",
+                "penalty": 0.5,
+                "axis": "GABA-axis interference"
+            }
+        ],
+        "family": "Sedative",
+        "attributes": []
+    },
+    {
+        "id": "blue_lotus",
+        "name": "Blue Lotus",
+        "family_botanical": "Nymphaeaceae",
+        "family_functional": "Sedative",
+        "role": "primary",
+        "min_percent": 10,
+        "max_percent": 15,
+        "constraints": {
+            "global_family_limit": {
+                "family": "Sedative",
+                "max_sum": 40
+            },
+            "cap": 15
+        },
+        "scores": {
+            "sleep": 8,
+            "mood": 8,
+            "meditation": 10
+        },
+        "synergies": [
+            {
+                "with": "magnolia",
+                "bonus": 1.0,
+                "axis": "deep mental relaxation"
+            }
+        ],
+        "antagonisms": [
+            {
+                "with": "green_tea",
+                "penalty": 0.5,
+                "axis": "induction vs activation"
+            }
+        ],
+        "family": "Sedative",
+        "attributes": []
+    },
+    {
+        "id": "magnolia",
+        "name": "Magnolia",
+        "family_botanical": "Magnoliaceae",
+        "family_functional": "Sedative",
+        "role": "primary",
+        "min_percent": 10,
+        "max_percent": 15,
+        "constraints": {
+            "global_family_limit": {
+                "family": "Sedative",
+                "max_sum": 40
+            },
+            "cap": 15
+        },
+        "scores": {
+            "anxiety": 8,
+            "sleep": 7,
+            "digestion": 6
+        },
+        "synergies": [
+            {
+                "with": "blue_lotus",
+                "bonus": 1.0
+            },
+            {
+                "with": "ashwagandha",
+                "bonus": 0.5,
+                "axis": "non-restorative sleep"
+            }
+        ],
+        "antagonisms": [
+            {
+                "with": "korean_ginseng",
+                "penalty": 0.5,
+                "axis": "sleep vs activation"
+            }
+        ],
+        "family": "Sedative",
+        "attributes": []
+    },
+    {
+        "id": "ashwagandha",
+        "name": "Ashwagandha",
+        "family_botanical": "Solanaceae",
+        "family_functional": "Adaptogen",
+        "role": "primary",
+        "min_percent": 25,
+        "max_percent": 35,
+        "constraints": {
+            "global_family_limit": {
+                "family": "Adaptogen",
+                "max_sum": 35
+            },
+            "conditions": [
+                {
+                    "condition": "pregnancy",
+                    "action": "exclude"
+                }
+            ]
+        },
+        "scores": {
+            "energy": 8,
+            "sleep": 7,
+            "stress": 9,
+            "immunity": 6
+        },
+        "synergies": [
+            {
+                "with": "bacopa",
+                "bonus": 1.0,
+                "axis": "stress resilience"
+            },
+            {
+                "with": "magnolia",
+                "bonus": 0.5
+            }
+        ],
+        "family": "Adaptogen",
+        "attributes": []
+    },
+    {
+        "id": "korean_ginseng",
+        "name": "Korean Ginseng",
+        "family_botanical": "Araliaceae",
+        "family_functional": "Adaptogen",
+        "role": "primary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "constraints": {
+            "global_family_limit": {
+                "family": "Adaptogen",
+                "max_sum": 35
+            },
+            "conditions": [
+                {
+                    "condition": "high_anxiety",
+                    "action": "exclude"
+                },
+                {
+                    "condition": "medication_polypharmacy",
+                    "action": "exclude"
+                }
+            ],
+            "cap": 25
+        },
+        "scores": {
+            "energy": 10,
+            "focus": 8,
+            "immunity": 7
+        },
+        "synergies": [
+            {
+                "with": "ginger",
+                "bonus": 1.0,
+                "axis": "sustained energy"
+            }
+        ],
+        "antagonisms": [
+            {
+                "with": "green_tea",
+                "penalty": 1.0,
+                "condition": "anxiety >= 6"
+            },
+            {
+                "with": "valerian",
+                "penalty": 1.0
+            },
+            {
+                "with": "magnolia",
+                "penalty": 0.5
+            },
+            {
+                "with": "licorice",
+                "action": "exclude",
+                "condition": "hypertension"
+            }
+        ],
+        "family": "Adaptogen",
+        "attributes": []
+    },
+    {
+        "id": "green_tea",
+        "name": "Green Tea",
+        "family_botanical": "Theaceae",
+        "family_functional": "Adaptogen",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 15,
+        "constraints": {
+            "global_family_limit": {
+                "family": "Adaptogen",
+                "max_sum": 35
+            },
+            "conditions": [
+                {
+                    "condition": "insomnia",
+                    "action": "exclude"
+                }
+            ],
+            "cap": 15
+        },
+        "scores": {
+            "energy": 9,
+            "focus": 8,
+            "antioxidant": 9
+        },
+        "synergies": [
+            {
+                "with": "rosemary",
+                "bonus": 0.5,
+                "condition": "anxiety < 6"
+            },
+            {
+                "with": "ginger",
+                "bonus": 0.5,
+                "axis": "metabolic activation"
+            }
+        ],
+        "antagonisms": [
+            {
+                "with": "korean_ginseng",
+                "penalty": 1.0,
+                "condition": "anxiety >= 6"
+            },
+            {
+                "with": "valerian",
+                "penalty": 1.0
+            },
+            {
+                "with": "passionflower",
+                "penalty": 0.5
+            },
+            {
+                "with": "blue_lotus",
+                "penalty": 0.5
+            }
+        ],
+        "family": "Adaptogen",
+        "attributes": []
+    },
+    {
+        "id": "bacopa",
+        "name": "Bacopa",
+        "family_botanical": "Plantaginaceae",
+        "family_functional": "Cognitive",
+        "role": "primary",
+        "min_percent": 25,
+        "max_percent": 35,
+        "constraints": {},
+        "scores": {
+            "focus": 9,
+            "memory": 9,
+            "anxiety": 5
+        },
+        "synergies": [
+            {
+                "with": "ashwagandha",
+                "bonus": 1.0
+            },
+            {
+                "with": "ginkgo",
+                "bonus": 1.0,
+                "axis": "memory and concentration"
+            }
+        ],
+        "family": "Cognitive",
+        "attributes": []
+    },
+    {
+        "id": "ginkgo",
+        "name": "Ginkgo biloba",
+        "family_botanical": "Ginkgoaceae",
+        "family_functional": "Cognitive",
+        "role": "secondary",
+        "min_percent": 15,
+        "max_percent": 20,
+        "constraints": {
+            "conditions": [
+                {
+                    "condition": "medication_blood_thinners",
+                    "action": "exclude"
+                }
+            ],
+            "cap": 20
+        },
+        "scores": {
+            "circulation": 9,
+            "focus": 8,
+            "memory": 8
+        },
+        "synergies": [
+            {
+                "with": "bacopa",
+                "bonus": 1.0
+            },
+            {
+                "with": "rosemary",
+                "bonus": 0.5,
+                "axis": "cerebral circulation"
+            }
+        ],
+        "family": "Cognitive",
+        "attributes": []
+    },
+    {
+        "id": "rosemary",
+        "name": "Rosemary",
+        "family_botanical": "Lamiaceae",
+        "family_functional": "Cognitive",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 15,
+        "constraints": {
+            "conditions": [
+                {
+                    "condition": "hypertension",
+                    "action": "caution"
+                }
+            ]
+        },
+        "scores": {
+            "focus": 8,
+            "energy": 6,
+            "digestion": 6
+        },
+        "synergies": [
+            {
+                "with": "ginkgo",
+                "bonus": 0.5
+            },
+            {
+                "with": "green_tea",
+                "bonus": 0.5,
+                "condition": "anxiety < 6"
+            },
+            {
+                "with": "lemongrass",
+                "bonus": 0.5,
+                "axis": "clean energy"
+            }
+        ],
+        "antagonisms": [
+            {
+                "with": "green_tea",
+                "penalty": 0.5,
+                "condition": "stress >= 6"
+            }
+        ],
+        "family": "Cognitive",
+        "attributes": []
+    },
+    {
+        "id": "anise",
+        "name": "Anise",
+        "family_botanical": "Apiaceae",
+        "family_functional": "Digestive",
+        "role": "secondary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "constraints": {},
+        "scores": {
+            "digestion": 9,
+            "bloating": 9
+        },
+        "synergies": [
+            {
+                "with": "fennel",
+                "bonus": 1.0,
+                "axis": "classic carminative"
+            }
+        ],
+        "family": "Digestive",
+        "attributes": []
+    },
+    {
+        "id": "fennel",
+        "name": "Fennel",
+        "family_botanical": "Apiaceae",
+        "family_functional": "Digestive",
+        "role": "secondary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "constraints": {},
+        "scores": {
+            "digestion": 9,
+            "bloating": 9
+        },
+        "synergies": [
+            {
+                "with": "anise",
+                "bonus": 1.0
+            }
+        ],
+        "antagonisms": [
+            {
+                "with": "anise",
+                "penalty": 0.5,
+                "condition": "distension",
+                "axis": "paradoxical flatulence"
+            }
+        ],
+        "family": "Digestive",
+        "attributes": []
+    },
+    {
+        "id": "peppermint",
+        "name": "Peppermint",
+        "family_botanical": "Lamiaceae",
+        "family_functional": "Digestive",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 15,
+        "constraints": {
+            "cap": 15,
+            "conditions": [
+                {
+                    "condition": "gastritis",
+                    "action": "caution"
+                }
+            ]
+        },
+        "scores": {
+            "digestion": 10,
+            "energy": 5,
+            "focus": 6
+        },
+        "synergies": [
+            {
+                "with": "chamomile",
+                "bonus": 0.5,
+                "axis": "antispasmodic"
+            }
+        ],
+        "family": "Digestive",
+        "attributes": []
+    },
+    {
+        "id": "ginger",
+        "name": "Ginger",
+        "family_botanical": "Zingiberaceae",
+        "family_functional": "Digestive",
+        "role": "secondary",
+        "min_percent": 10,
+        "max_percent": 20,
+        "constraints": {
+            "conditions": [
+                {
+                    "condition": "gastritis",
+                    "action": "caution"
+                }
+            ]
+        },
+        "scores": {
+            "digestion": 8,
+            "nausea": 10,
+            "immunity": 6,
+            "circulation": 7
+        },
+        "synergies": [
+            {
+                "with": "turmeric",
+                "bonus": 1.0,
+                "axis": "anti-inflammatory"
+            },
+            {
+                "with": "cinnamon",
+                "bonus": 0.5,
+                "axis": "thermogenesis"
+            },
+            {
+                "with": "green_tea",
+                "bonus": 0.5
+            }
+        ],
+        "family": "Digestive",
+        "attributes": []
+    },
+    {
+        "id": "chamomile",
+        "name": "Chamomile",
+        "family_botanical": "Asteraceae",
+        "family_functional": "Digestive",
+        "role": "secondary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "constraints": {
+            "conditions": [
+                {
+                    "condition": "asteraceae_allergy",
+                    "action": "exclude"
+                }
+            ]
+        },
+        "scores": {
+            "digestion": 9,
+            "anxiety": 7,
+            "sleep": 6
+        },
+        "synergies": [
+            {
+                "with": "peppermint",
+                "bonus": 0.5
+            },
+            {
+                "with": "linden",
+                "bonus": 0.5,
+                "axis": "gentle nervous regulation"
+            }
+        ],
+        "family": "Digestive",
+        "attributes": []
+    },
+    {
+        "id": "echinacea",
+        "name": "Echinacea",
+        "family_botanical": "Asteraceae",
+        "family_functional": "Immunity",
+        "role": "primary",
+        "min_percent": 20,
+        "max_percent": 30,
+        "constraints": {
+            "conditions": [
+                {
+                    "condition": "prolonged_use",
+                    "action": "cap_percent",
+                    "value": 20
+                },
+                {
+                    "condition": "asteraceae_allergy",
+                    "action": "exclude"
+                }
+            ]
+        },
+        "scores": {
+            "immunity": 10
+        },
+        "synergies": [
+            {
+                "with": "cistus",
+                "bonus": 1.0,
+                "axis": "immune defense"
+            }
+        ],
+        "family": "Immunity",
+        "attributes": []
+    },
+    {
+        "id": "turmeric",
+        "name": "Turmeric",
+        "family_botanical": "Zingiberaceae",
+        "family_functional": "Immunity",
+        "role": "secondary",
+        "min_percent": 15,
+        "max_percent": 25,
+        "constraints": {},
+        "scores": {
+            "inflammation": 9,
+            "immunity": 7,
+            "digestion": 6
+        },
+        "synergies": [
+            {
+                "with": "ginger",
+                "bonus": 1.0
+            }
+        ],
+        "family": "Immunity",
+        "attributes": []
+    },
+    {
+        "id": "rose",
+        "name": "Rose",
+        "family_botanical": "Rosaceae",
+        "family_functional": "Sensory",
+        "role": "support",
+        "min_percent": 5,
+        "max_percent": 10,
+        "constraints": {},
+        "scores": {
+            "mood": 7,
+            "flavor": 10
+        },
+        "synergies": [
+            {
+                "with": "osmanthus",
+                "bonus": 0.5
+            },
+            {
+                "with": "hibiscus",
+                "bonus": 0.5
+            }
+        ],
+        "family": "Sensory",
+        "attributes": []
+    },
+    {
+        "id": "hibiscus",
+        "name": "Hibiscus",
+        "family_botanical": "Malvaceae",
+        "family_functional": "Sensory",
+        "role": "support",
+        "min_percent": 5,
+        "max_percent": 10,
+        "constraints": {},
+        "scores": {
+            "flavor": 9,
+            "circulation": 7
+        },
+        "synergies": [
+            {
+                "with": "rose",
+                "bonus": 0.5
+            }
+        ],
+        "antagonisms": [
+            {
+                "with": "hypotension",
+                "penalty": 1.0
+            }
+        ],
+        "family": "Sensory",
+        "attributes": []
+    }
+]
